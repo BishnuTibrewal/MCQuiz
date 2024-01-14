@@ -1,7 +1,9 @@
 let ccount = 0;
 let wcount = 0;
 
-function endGame() {
+function endGame(n) {
+  document.getElementById(`question${n}`).style.visibility = "hidden";
+  document.getElementById(`question${n}`).style.display = "none";
   document.getElementById("result").innerText =
     "Alass! You have lost the game.";
   document.getElementById("result").style.visibility = "visible";
@@ -9,7 +11,9 @@ function endGame() {
   alert("Sorry You Loose!");
 }
 
-function winGame() {
+function winGame(n) {
+  document.getElementById(`question${n}`).style.visibility = "hidden";
+  document.getElementById(`question${n}`).style.display = "none";
   document.getElementById("result").innerText =
     "Congrats! You have won the game.";
   document.getElementById("result").style.visibility = "visible";
@@ -35,7 +39,7 @@ for (let i = 0; i < document.getElementsByClassName("options1").length; i++) {
         alert("Ohoo, Try Again!");
         wcount++;
         if (wcount == 2) {
-          endGame();
+          endGame(1);
         }
       }
     });
@@ -51,7 +55,7 @@ for (let i = 0; i < document.getElementsByClassName("options2").length; i++) {
         document.getElementById("wrong1").style.visibility = "hidden";
         ccount++;
         if (ccount >= 2) {
-          winGame();
+          winGame(2);
         }
       } else {
         document.getElementById("wrong2").style.visibility = "visible";
@@ -59,7 +63,7 @@ for (let i = 0; i < document.getElementsByClassName("options2").length; i++) {
         alert("Ohoo, Try Again!");
         wcount++;
         if (wcount == 2) {
-          endGame();
+          endGame(2);
         }
       }
     });
