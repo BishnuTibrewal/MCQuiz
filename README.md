@@ -1,2 +1,2 @@
 # MCQuiz
-A MCQ Quiz about the author
+A MCQ Quiz using HTML & Javascript
